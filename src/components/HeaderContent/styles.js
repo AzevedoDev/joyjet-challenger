@@ -16,6 +16,7 @@ export const Container = styled.section`
     content: '';
     background-image: url(${backgroundImage});
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 420px;
@@ -46,6 +47,9 @@ export const HeaderContent = styled.div`
     line-height: 67px;
     text-transform: uppercase;
     padding-bottom: 8px;
+    span {
+      color: ${theme.color.blue};
+    }
   }
 
   p {

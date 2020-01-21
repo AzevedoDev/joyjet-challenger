@@ -26,9 +26,12 @@ export const About = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: ${props => (props.states === 3 ? 'row' : 'column')};
+  align-items: center;
   padding: 0 24px 72px 24px;
-
+  div {
+    padding: 0 ${props => (props.states === 3 ? '32px' : '0')};
+  }
   h3 {
     font-style: normal;
     font-weight: normal;
@@ -46,6 +49,9 @@ export const About = styled.div`
   img {
     border-radius: 9px;
     padding-bottom: 34px;
+    width: 100%;
+    max-width: ${props => (props.states <= 2 ? '355px' : '552px')};
+    min-width: 277px;
   }
 `;
 

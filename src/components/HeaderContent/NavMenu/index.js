@@ -1,7 +1,7 @@
 import React from 'react';
 import { SpaceLogo } from '../../../assets/svg/icons';
 import * as Styled from './styles';
-import { FadeInDown, FadeOut } from 'animate-css-styled-components';
+import { FadeInDown } from 'animate-css-styled-components';
 
 export default function NavMenu({ setMenuState }) {
   function handleOnClose() {

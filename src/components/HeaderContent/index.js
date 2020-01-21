@@ -19,7 +19,9 @@ export default function HeaderContent() {
           />
         </Styled.Wrapper>
         <Styled.HeaderContent>
-          <h2>space</h2>
+          <h2>
+            space<span>.</span>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             molestie elit at lacus…
