@@ -11,6 +11,9 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   border: 0;
 }
+body{
+  background-color: #F8F8F8;
+}
 
 
 `;
