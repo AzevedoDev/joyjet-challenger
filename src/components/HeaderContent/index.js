@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { SpaceLogo } from '../../assets/svg/icons';
 import { Button } from '../utils/Button/styles';
 import NavMenu from './NavMenu';
+import NavMenuDesktop from './NavMenuDesktop';
+import Tranding from './Tranding';
 
 import * as Styled from './styles';
 
@@ -12,6 +14,7 @@ export default function HeaderContent() {
       <Styled.Container>
         <Styled.Wrapper>
           <SpaceLogo />
+          <NavMenuDesktop />
           <Styled.MenuHamburguer
             onClick={() => {
               setMenuState(true);
@@ -26,8 +29,11 @@ export default function HeaderContent() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             molestie elit at lacus…
           </p>
+          <Button color="lightBlue">Click</Button>
         </Styled.HeaderContent>
-        <Button color="lightBlue">Click</Button>
+        <Styled.Trending>
+          <Tranding />
+        </Styled.Trending>
       </Styled.Container>
       {menuState && <NavMenu setMenuState={setMenuState} />}
     </>

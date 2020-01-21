@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import media from 'styled-media-query';
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Poppins');
@@ -17,4 +18,15 @@ body{
 }
 
 
+`;
+
+export const Container = styled.div`
+  ${media.greaterThan('huge')`
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  `}
 `;

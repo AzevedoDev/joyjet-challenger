@@ -3,12 +3,20 @@ import Slider from 'infinite-react-carousel';
 import ArrowRight from '../../assets/img/arrow-right.png';
 import ArrowLeft from '../../assets/img/arrow-left.png';
 import { theme } from '../../styles/theme';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  ${media.greaterThan('huge')`
+    width: 1440px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export const Carousel = styled(Slider)`
@@ -26,11 +34,16 @@ export const About = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: ${props => (props.states === 3 ? 'row' : 'column')};
+  flex-direction: column;
   align-items: center;
   padding: 0 24px 72px 24px;
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+  `};
   div {
-    padding: 0 ${props => (props.states === 3 ? '32px' : '0')};
+    ${media.greaterThan('medium')`
+      padding: 0 32px;
+  `};
   }
   h3 {
     font-style: normal;
@@ -50,8 +63,11 @@ export const About = styled.div`
     border-radius: 9px;
     padding-bottom: 34px;
     width: 100%;
-    max-width: ${props => (props.states <= 2 ? '355px' : '552px')};
+    max-width: 355px;
     min-width: 277px;
+    ${media.greaterThan('medium')`
+      max-width: 552px;
+    `};
   }
 `;
 

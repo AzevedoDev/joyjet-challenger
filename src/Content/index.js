@@ -21,4 +21,22 @@ export const contents = [
       Curabitur luctus aliquet sapien….`,
     image: MoonImg,
   },
+  {
+    title: 'International Space Station',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Curabitur luctus aliquet sapien….`,
+    image: SpaceImg,
+  },
+  {
+    title: 'My capsule',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Curabitur luctus aliquet sapien….`,
+    image: SateliteImg,
+  },
+  {
+    title: 'My moon',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Curabitur luctus aliquet sapien….`,
+    image: MoonImg,
+  },
 ];
