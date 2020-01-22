@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   svg {
     margin-right: 8px;
   }
@@ -27,7 +28,7 @@ export const MenuItens = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 32px;
+  padding-top: 32px 138px;
 `;
 
 export const MenuItem = styled.button`

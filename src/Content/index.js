@@ -1,6 +1,6 @@
-import SateliteImg from '../assets/img/43688.png';
-import SpaceImg from '../assets/img/43690.png';
-import MoonImg from '../assets/img/43698.png';
+import SateliteImg from '../assets/img/43688.jpg';
+import SpaceImg from '../assets/img/43690.jpg';
+import MoonImg from '../assets/img/43698.jpg';
 
 export const contents = [
   {

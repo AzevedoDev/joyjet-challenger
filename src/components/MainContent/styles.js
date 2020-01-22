@@ -17,11 +17,19 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
   `}
+  ${media.greaterThan('medium')`
+    padding: 51px 10vw;
+  `}
 `;
 
 export const Carousel = styled(Slider)`
   width: 100%;
   padding-bottom: 64px;
+  .carousel-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .carousel-next:before {
     background-image: url(${ArrowRight});
   }
@@ -37,7 +45,7 @@ export const About = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 24px 72px 24px;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
     flex-direction: row;
   `};
   div {
@@ -52,6 +60,7 @@ export const About = styled.div`
     line-height: 39px;
     text-transform: uppercase;
     color: ${theme.color.blue};
+    padding-top: 32px;
     padding-bottom: 16px;
   }
   p {
@@ -60,8 +69,7 @@ export const About = styled.div`
     color: ${theme.color.darkBlue};
   }
   img {
-    border-radius: 9px;
-    padding-bottom: 34px;
+    border-radius: 10px;
     width: 100%;
     max-width: 355px;
     min-width: 277px;

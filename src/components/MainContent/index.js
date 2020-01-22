@@ -1,42 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../utils/Card';
 import { contents } from '../../Content';
-import AboutImage from '../../assets/img/43688.png';
+import AboutImage from '../../assets/img/43688.jpg';
 
 import * as Styled from './styles';
 
 export default function MainContent() {
-  const [states, setStates] = useState(window.innerWidth >= 765 ? 2 : 1);
-
+  const [slidesConfig, setSlidesConfig] = useState();
+  const slide = () => {
+    if (window.innerWidth < 767) {
+      setSlidesConfig(1);
+    }
+    if (window.innerWidth >= 768 && window.innerWidth <= 990) {
+      setSlidesConfig(2);
+    }
+    if (window.innerWidth > 991) {
+      setSlidesConfig(3);
+    }
+  };
+  useEffect(() => {
+    if (window.innerWidth < 767) {
+      setSlidesConfig(1);
+    }
+    if (window.innerWidth >= 768 && window.innerWidth <= 990) {
+      setSlidesConfig(2);
+    }
+    if (window.innerWidth > 991) {
+      setSlidesConfig(3);
+    }
+  }, []);
   const sliderSettings = {
     dots: true,
-    autoplay: true,
     autoplaySpeed: 6000,
-    arrowsBlock: false,
-    slidesToShow: states,
+    arrowsBlock: true,
+    slidesToShow: slidesConfig,
   };
+
   return (
     <Styled.Container>
-      <Styled.Carousel
-        {...sliderSettings}
-        onResize={e => {
-          if (e.target.innerWidth <= 765) {
-            setStates(1);
-          } else if (
-            e.target.innerWidth >= 766 &&
-            e.target.innerWidth <= 1023
-          ) {
-            setStates(2);
-          } else {
-            setStates(3);
-          }
-        }}
-      >
+      <Styled.Carousel {...sliderSettings} onResize={() => slide()}>
         {contents.map(content => (
           <Card content={content} key={Math.random()} />
         ))}
       </Styled.Carousel>
-      <Styled.About states={states}>
+      <Styled.About>
         <img src={AboutImage} alt="one satelite" />
         <div>
           <h3>About us</h3>

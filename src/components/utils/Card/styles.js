@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import { theme } from '../../../styles/theme';
+import media from 'styled-media-query';
 
 export const Card = styled.div`
   max-width: 368px;
-  max-height: 462px;
+  height: 388px;
+  ${media.greaterThan('medium')`
+    height: 462px;
+  `}
   background-color: ${theme.color.white};
   margin: 0 24px;
   font-style: normal;
   border-radius: 8px;
   margin-top: 50px;
-
+  padding-bottom: 25px;
   font-weight: normal;
   img {
     width: 100%;

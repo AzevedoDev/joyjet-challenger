@@ -22,14 +22,16 @@ export default function HeaderContent() {
           />
         </Styled.Wrapper>
         <Styled.HeaderContent>
-          <h2>
-            space<span>.</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            molestie elit at lacus…
-          </p>
-          <Button color="lightBlue">Click</Button>
+          <div>
+            <h2>
+              space<span>.</span>
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              molestie elit at lacus…
+            </p>
+            <Button color="lightBlue">Click</Button>
+          </div>
         </Styled.HeaderContent>
         <Styled.Trending>
           <Tranding />
