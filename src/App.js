@@ -8,8 +8,6 @@ function App() {
   const [isSticky, setSticky] = useState(false);
 
   const handleScroll = () => {
-    console.log(ref.current.getBoundingClientRect());
-
     if (ref.current.getBoundingClientRect().top <= -583) {
       setSticky(true);
     }
