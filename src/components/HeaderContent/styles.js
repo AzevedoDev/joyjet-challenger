@@ -17,7 +17,12 @@ export const Container = styled.section`
   ${media.greaterThan('769px')`
       height: 662px;
     `}
-
+  ${media.between('421px', '890px')`
+    height: 90vw;
+  `};
+  ${media.lessThan('420px')`
+    height: 420px;
+  `};
   &::before {
     content: '';
     background-image: url(${backgroundImage});
@@ -25,6 +30,12 @@ export const Container = styled.section`
       background-size: cover;
       height: 662px;
     `}
+    ${media.between('421px', '890px')`
+    height: 90vw;
+  `};
+    ${media.lessThan('420px')`
+    height: 420px;
+  `};
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,7 +116,7 @@ export const Trending = styled.div`
   position: absolute;
   z-index: 2;
   color: ${theme.color.white};
-  ${media.lessThan('medium')`
+  ${media.lessThan('890px')`
     display: none;
   `};
   display: flex;

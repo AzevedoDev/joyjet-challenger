@@ -6,7 +6,9 @@ import AboutImage from '../../assets/img/43688.jpg';
 import * as Styled from './styles';
 
 export default function MainContent() {
-  const [slidesConfig, setSlidesConfig] = useState();
+  const [slidesConfig, setSlidesConfig] = useState(
+    window.innerWidth >= 768 ? 2 : 1
+  );
   const slide = () => {
     if (window.innerWidth < 767) {
       setSlidesConfig(1);

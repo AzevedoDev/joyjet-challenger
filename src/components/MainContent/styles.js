@@ -32,9 +32,11 @@ export const Carousel = styled(Slider)`
   }
   .carousel-next:before {
     background-image: url(${ArrowRight});
+    margin-left: 32px;
   }
   .carousel-prev:before {
     background-image: url(${ArrowLeft});
+    margin-right: 32px;
   }
 `;
 
@@ -75,6 +77,7 @@ export const About = styled.div`
     min-width: 277px;
     ${media.greaterThan('medium')`
       max-width: 552px;
+      height: auto;
     `};
   }
 `;
