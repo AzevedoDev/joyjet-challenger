@@ -52,8 +52,9 @@ export const Container = styled.section`
 
 export const Wrapper = styled.div`
   ${media.greaterThan('huge')`
-    width: 1440px;
+    ${({ isSticky }) => (isSticky ? 'width: 100%' : 'width: 1440px')}
   `}
+
   ${media.greaterThan('medium')`
     padding: 51px 10vw;
   `}
@@ -62,6 +63,11 @@ export const Wrapper = styled.div`
   `}
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 24px;
+
 ${({ isSticky }) =>
   isSticky &&
   `
@@ -71,11 +77,7 @@ ${({ isSticky }) =>
   height: 96px;
   z-index: 9999;
   padding: 0 8vw;
-`}
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  padding: 24px;
+`};
 `;
 
 export const HeaderContent = styled.div`
@@ -86,12 +88,15 @@ export const HeaderContent = styled.div`
   flex-direction: column;
   padding: 24px;
     ${media.greaterThan('medium')`
-    padding: 0 10vw 220px;
+    ${({ isSticky }) =>
+      isSticky ? 'padding: 260px 10vw' : 'padding: 0 10vw 220px'};
+
   `}
   color: ${theme.color.white};
   letter-spacing: 0.305085px;
   div{
     width: 100%;
+
   h2 {
     font-size: 48px;
     line-height: 67px;

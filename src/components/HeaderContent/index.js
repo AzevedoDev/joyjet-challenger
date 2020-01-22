@@ -22,7 +22,7 @@ export default function HeaderContent({ isSticky }) {
             }}
           />
         </Styled.Wrapper>
-        <Styled.HeaderContent>
+        <Styled.HeaderContent isSticky={isSticky}>
           <div>
             <h2>
               space<span>.</span>

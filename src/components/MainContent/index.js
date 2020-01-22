@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Card from '../utils/Card';
 import { contents } from '../../Content';
 import AboutImage from '../../assets/img/43688.jpg';
