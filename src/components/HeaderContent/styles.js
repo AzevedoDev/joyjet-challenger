@@ -60,9 +60,18 @@ export const Wrapper = styled.div`
   ${media.between('medium', '805px')`
     padding: 51px 8vw;
   `}
-
   display: flex;
   flex-direction: row;
+${({ isSticky }) =>
+  isSticky &&
+  `
+  position: fixed;
+  background-color: ${theme.color.lightBlue};
+  top: 0;
+  height: 96px;
+  z-index: 9999;
+  padding: 0 8vw;
+`}
   justify-content: space-between;
   width: 100%;
   align-items: center;

@@ -7,12 +7,13 @@ import Tranding from './Tranding';
 
 import * as Styled from './styles';
 
-export default function HeaderContent() {
+export default function HeaderContent({ isSticky }) {
   const [menuState, setMenuState] = useState(false);
+
   return (
     <>
       <Styled.Container>
-        <Styled.Wrapper>
+        <Styled.Wrapper isSticky={isSticky}>
           <SpaceLogo />
           <NavMenuDesktop />
           <Styled.MenuHamburguer
