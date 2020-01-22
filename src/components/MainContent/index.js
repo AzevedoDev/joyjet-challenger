@@ -18,17 +18,7 @@ export default function MainContent() {
       setSlidesConfig(3);
     }
   };
-  useEffect(() => {
-    if (window.innerWidth < 767) {
-      setSlidesConfig(1);
-    }
-    if (window.innerWidth >= 768 && window.innerWidth <= 990) {
-      setSlidesConfig(2);
-    }
-    if (window.innerWidth > 991) {
-      setSlidesConfig(3);
-    }
-  }, []);
+
   const sliderSettings = {
     dots: true,
     autoplaySpeed: 6000,
