@@ -67,7 +67,6 @@ export const Wrapper = styled.div`
   width: 100%;
   align-items: center;
   padding: 24px;
-
 ${({ isSticky }) =>
   isSticky &&
   `
@@ -90,6 +89,10 @@ export const HeaderContent = styled.div`
     ${media.greaterThan('medium')`
     ${({ isSticky }) =>
       isSticky ? 'padding: 260px 10vw' : 'padding: 0 10vw 220px'};
+
+  `}
+  ${media.lessThan('medium')`
+    ${({ isSticky }) => isSticky && 'padding-top: 160px'};
 
   `}
   color: ${theme.color.white};

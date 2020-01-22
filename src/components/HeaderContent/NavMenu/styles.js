@@ -7,9 +7,9 @@ import media from 'styled-media-query';
 export const Container = styled(FadeIn)`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 9999999;
   background-color: ${theme.color.lightBlue};
   color: ${theme.color.white};
   padding: 24px;
